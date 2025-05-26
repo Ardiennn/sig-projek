@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&display=swap');
+/* ardiennn/sig-projek/sig-projek-844f129b697ffc0a538d26a1c15375276dd9afc9/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-darkBg text-lightBg font-lora; /* Latar belakang cokelat tua, teks krem, font Lora */
+    }
+}
 
 @layer components {
     html {
@@ -14,12 +21,12 @@
         @apply translate-y-0 visible opacity-100;
     }
 
-    /* Stroke Text */
+    /* Stroke Text (warna disesuaikan) */
     .stroke-text {
         @apply text-white;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1.4px;
-        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-color: #F5F5DC; /* Menggunakan warna lightBg (Beige) */
     }
 
     /* Scroll to Top */

@@ -1,3 +1,4 @@
+// ardiennn/sig-projek/sig-projek-844f129b697ffc0a538d26a1c15375276dd9afc9/app/layout.tsx
 import type { Metadata } from "next";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,13 +14,13 @@ import Cursor from "@/components/Cursor";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-    title: seoData.home.title,
-    description: seoData.home.description,
+    title: seoData.home.title, //
+    description: seoData.home.description, //
     openGraph: {
-        title: seoData.home.title,
-        description: seoData.home.description,
+        title: seoData.home.title, //
+        description: seoData.home.description, //
     },
-    keywords: seoData.home.keywords,
+    keywords: seoData.home.keywords, //
 };
 
 export default function RootLayout({
@@ -30,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className="bg-black font-opensans overflow-x-hidden"
+                className="bg-darkBg font-lora text-lightBg overflow-x-hidden" // Menggunakan kelas baru
             >
                 {/* Header */}
                 <Header />

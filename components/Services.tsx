@@ -1,25 +1,24 @@
-import { servicesData } from '@/lib/siteData'
+// ardiennn/sig-projek/sig-projek-844f129b697ffc0a538d26a1c15375276dd9afc9/components/Services.tsx
+import { servicesData } from '@/lib/siteData' //
 import React from 'react'
 
 const Services = () => {
     return (
-        <div id="services" className="w-full lg:flex py-24 xl:py-28 space-y-6 lg:space-y-0">
+        <div id="services" className="w-full lg:flex py-24 xl:py-28 space-y-10 lg:space-y-0 lg:space-x-12">
             <div className="w-full lg:w-1/3">
-                <h6 className="pl-[20px] relative font-outfit font-medium text-sm uppercase tracking-wider text-white/40 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[12px] before:h-[12px] before:rounded-full before:border-2 before:border-white/30">{servicesData.mainData.title}</h6>
-                <h2 className="font-outfit font-medium text-4xl md:text-5xl lg:text-6xl text-white mt-2">{servicesData.mainData.title2} <span className="bg-themeGradient bg-clip-text text-transparent">{servicesData.mainData.title2Span}</span></h2>
+                <h6 className="pl-[20px] relative font-outfit font-medium text-sm uppercase tracking-wider text-lightBg/50 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[12px] before:h-[12px] before:rounded-full before:border-2 before:border-accentLight/50">{servicesData.mainData.title}</h6>
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-lightBg mt-2">{servicesData.mainData.title2} <span className="text-accentLight">{servicesData.mainData.title2Span}</span></h2>
+                <p className='mt-4 text-lightBg/70'>Jelajahi fitur-fitur yang kami sediakan untuk membantumu menemukan tempat kerja yang sempurna.</p>
             </div>
-            <div className="w-full lg:w-2/3 space-y-6">
-                {servicesData.services.map((item, index) => (
-                    <div key={index} className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient">
-                        <div className="md:w-[15%] text-white">
-                            <span className="font-outfit text-2xl xl:text-3xl font-medium">{item.number}/</span>
+            <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {servicesData.services.slice(0, 6).map((item, index) => ( // Hanya menampilkan 6 layanan
+                    <div key={index} className="z-[1] p-8 space-y-4 bg-darkBg/60 rounded-xl relative overflow-hidden border border-white/10 transition-all duration-300 ease-custom hover:border-accentLight/50 hover:shadow-2xl hover:scale-[1.02]">
+                        <div className="flex items-center space-x-4">
+                            <i className={`${item.bootstrapIcon} text-3xl text-accentLight`}></i>
+                            <h3 className="font-playfair font-semibold text-xl xl:text-2xl text-lightBg">{item.title}</h3>
                         </div>
-                        <div className="md:w-[40%] text-white">
-                            <i className={`${item.bootstrapIcon} text-3xl`}></i>
-                            <h3 className="inline-flex pl-3 font-outfit font-medium text-2xl xl:text-3xl">{item.title}</h3>
-                        </div>
-                        <div className="md:w-[45%]">
-                            <p className="text-white/70">{item.description}</p>
+                        <div>
+                            <p className="text-lightBg/70">{item.description}</p>
                         </div>
                     </div>
                 ))}
