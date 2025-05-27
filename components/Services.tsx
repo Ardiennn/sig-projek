@@ -11,7 +11,7 @@ const Services = () => {
                 <p className='mt-4 text-lightBg/70'>Jelajahi fitur-fitur yang kami sediakan untuk membantumu menemukan tempat kerja yang sempurna.</p>
             </div>
             <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {servicesData.services.slice(0, 6).map((item, index) => ( // Hanya menampilkan 6 layanan
+                {servicesData.services.slice(0, 7).map((item, index) => ( // Hanya menampilkan 6 layanan
                     <div key={index} className="z-[1] p-8 space-y-4 bg-darkBg/60 rounded-xl relative overflow-hidden border border-white/10 transition-all duration-300 ease-custom hover:border-accentLight/50 hover:shadow-2xl hover:scale-[1.02]">
                         <div className="flex items-center space-x-4">
                             <i className={`${item.bootstrapIcon} text-3xl text-accentLight`}></i>

@@ -53,7 +53,7 @@ export const servicesData = { //
             number: '04',
             bootstrapIcon: 'bi bi-sign-turn-right-fill', // Ikon diubah
             title: 'Panduan Rute',
-            description: 'Dapatkan rute termudah dan tercepat langsung ke workspace tujuanmu.',
+            description: 'Temukan jalur termudah dan tercepat untuk mengunjungi workspace satu ke workspace lainnya.',
         },
         {
             number: '05',
@@ -71,7 +71,7 @@ export const servicesData = { //
             number: '07',
             bootstrapIcon: 'bi bi-geo-alt-fill', // Ikon diubah
             title: 'Radius Pencarian',
-            description: 'Temukan cafe dalam radius tertentu dari lokasimu saat ini (misal: 2 km).',
+            description: 'Temukan cafe dalam radius tertentu.',
         },
     ]
 };
